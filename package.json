@@ -1,5 +1,19 @@
 {
-    "dependencies": {
-      "hono": "^3.0.0"
-    }
-  }
+  "name": "cloudflare-cache-purge",
+  "version": "1.0.0",
+  "description": "A simple web interface for purging Cloudflare cache",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler pages dev --compatibility-date=2024-01-23",
+    "deploy": "wrangler pages deploy ."
+  },
+  "dependencies": {
+    "hono": "^3.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  },
+  "author": "",
+  "license": "MIT"
+}
