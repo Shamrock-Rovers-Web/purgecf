@@ -1,18 +1,12 @@
 {
   "name": "cloudflare-cache-purge",
   "version": "1.0.0",
-  "description": "A simple web interface for purging Cloudflare cache",
+  "description": "A simple endpoint for purging Cloudflare cache",
   "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev --compatibility-date=2024-01-23",
-    "deploy": "wrangler pages deploy .",
-    "build": "node build.js"
-  },
-  "dependencies": {
-    "hono": "^4.6.19"
+    "deploy": "wrangler pages deploy ."
   },
   "devDependencies": {
-    "esbuild": "^0.20.0",
     "wrangler": "^3.22.1"
   },
   "author": "",

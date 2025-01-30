@@ -1,14 +1,2 @@
-[build]
-command = "npm install"
-
-[build.upload]
-format = "modules"
-dir = "./functions"
-main = "./index.js"
-
-[[build.upload.rules]]
-type = "ESModule"
-globs = ["**/*.js"]
-
 [site]
 bucket = "."
