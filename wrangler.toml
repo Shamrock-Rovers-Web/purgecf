@@ -1,0 +1,15 @@
+[build]
+command = "npm install"
+[build.upload]
+format = "modules"
+main = "./index.js"
+dir = "."
+
+[site]
+bucket = "."
+
+[env.production]
+name = "cloudflare-cache-purge"
+
+[build.upload.rules]
+type = "ESModule"

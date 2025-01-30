@@ -1,9 +1,9 @@
-import { Hono } from 'hono'
-import { serveStatic } from 'hono/cloudflare-pages'
+import { Hono } from './hono.js'
+import { serveStatic } from './cloudflare-pages.js'
 
 const app = new Hono()
 
-app.get('/', serveStatic({ path: './index.html' }))
+app.get('/', serveStatic({ path: '../index.html' }))
 
 app.post('/purge', async (c) => {
   const { zoneId, apiToken } = await c.req.json()
@@ -26,4 +26,4 @@ app.post('/purge', async (c) => {
   }
 })
 
-export default app
+export const onRequest = app.fetch

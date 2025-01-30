@@ -2,11 +2,11 @@
   "name": "cloudflare-cache-purge",
   "version": "1.0.0",
   "description": "A simple web interface for purging Cloudflare cache",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "wrangler pages dev --compatibility-date=2024-01-23",
-    "deploy": "wrangler pages deploy ."
+    "deploy": "wrangler pages deploy .",
+    "build": "cp node_modules/hono/dist/index.js functions/hono.js && cp node_modules/hono/dist/cloudflare-pages.js functions/cloudflare-pages.js"
   },
   "dependencies": {
     "hono": "^4.6.19"
