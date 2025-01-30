@@ -21,8 +21,8 @@ A simple, modern web interface for purging Cloudflare's cache using Zone ID and 
 
 1. Clone the repository:
 ```bash
-git clone [your-repo-url]
-cd cache
+git clone https://github.com/YOUR_USERNAME/cloudflare-cache-purge.git
+cd cloudflare-cache-purge
 ```
 
 2. Install dependencies:

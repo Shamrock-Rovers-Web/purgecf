@@ -16,3 +16,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Cloudflare Pages deployment setup
 - Documentation (README, CHANGELOG)
 - Basic security measures for API token handling
+
+## [1.0.0] - 2025-01-30
+
+### Added
+- Initial release
+- Modern UI with Tailwind CSS
+- Zone ID and API Token form
+- Server-side cache purge functionality
+- Real-time feedback on purge operations
+
+### Security
+- Basic security measures for API token handling
+- Server-side only API calls
+- No token storage
+
+### Documentation
+- Complete README with setup instructions
+- API token requirements documentation
+- Development guidelines
