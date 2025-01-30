@@ -5,33 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-01-23
+## [1.1.0] - 2025-01-30
 
-### Added
-- Initial release
-- Basic web interface with Tailwind CSS
-- Cloudflare cache purge functionality
-- Zone ID and API Token form
-- Real-time success/error feedback
-- Cloudflare Pages deployment setup
-- Documentation (README, CHANGELOG)
-- Basic security measures for API token handling
+### Changed
+- Simplified entire application to a single endpoint
+- Removed web interface in favor of direct URL access
+- Now uses environment variables for credentials instead of manual input
+- Removed unnecessary dependencies (hono, tailwindcss)
+- Simplified build and deployment process
+
+### Security
+- Credentials now stored securely in Cloudflare Pages environment
+- Removed all client-side code
+- All API calls made server-side
 
 ## [1.0.0] - 2025-01-30
 
 ### Added
 - Initial release
-- Modern UI with Tailwind CSS
-- Zone ID and API Token form
-- Server-side cache purge functionality
+- Web interface for purging Cloudflare cache
+- Support for Zone ID and API Token input
 - Real-time feedback on purge operations
-
-### Security
-- Basic security measures for API token handling
-- Server-side only API calls
-- No token storage
-
-### Documentation
-- Complete README with setup instructions
-- API token requirements documentation
-- Development guidelines
+- Error handling and user feedback
+- Documentation for setup and usage

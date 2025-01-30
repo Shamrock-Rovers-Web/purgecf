@@ -1,42 +1,36 @@
 # Development Notes
 
+## Architecture
+
+- Single endpoint that handles all requests
+- Uses Cloudflare Pages Functions
+- Environment variables for secure credential storage
+- No frontend, just direct HTTP responses
+
 ## Security Implementation
-- No client-side storage of sensitive data
-- API tokens handled server-side only
-- All API requests made through Cloudflare Pages functions
-- HTTPS enforced for all communications
 
-## Future Enhancements
-- Add support for purging specific URLs
-- Add support for purging by cache tags
-- Save Zone IDs (but not tokens) in local storage
-- Add support for multiple zones
-- Add rate limiting
-- Add success/error notifications
+- Credentials stored as environment variables in Cloudflare Pages
+- No client-side code or storage
+- All API calls made server-side
+- HTTPS enforced by default
 
-## Development Setup
-- Node.js 18+ required
-- Uses Wrangler for local development and deployment
-- Tailwind CSS for styling
-- Hono for API routing
+## API Integration
 
-## API Token Requirements
-
-Required permissions for the API token:
-- Zone.Cache Purge
-- Include all zones or specific zones
+- Uses Cloudflare's API v4
+- Endpoint: `zones/:zone_identifier/purge_cache`
+- Authentication via Bearer token
+- Purges entire zone cache
 
 ## Deployment
-- Cloudflare Pages
-- Auto-deployment on main branch
-- Environment variables not required
 
-## Testing
-- Manual testing of cache purge functionality
-- API response validation
-- Error handling verification
+- Deployed on Cloudflare Pages
+- No build step required
+- Functions directory contains all logic
+- Environment variables set in Cloudflare Pages dashboard
 
-## Known Limitations
-- Only supports purging entire zone cache
-- No persistent storage
-- Single zone at a time
+## Future Considerations
+
+- Could add IP whitelisting if needed
+- Could add basic auth for additional security
+- Could add specific URL purging instead of entire zone
+- Could add webhook support for automated purging

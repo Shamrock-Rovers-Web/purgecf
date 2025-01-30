@@ -1,68 +1,36 @@
-# Cloudflare Cache Purge UI
+# Cloudflare Cache Purge
 
-A simple, modern web interface for purging Cloudflare's cache using Zone ID and API Token.
-
-## Features
-
-- Clean, responsive UI built with Tailwind CSS
-- Secure API token handling
-- Instant cache purging for entire zones
-- Real-time feedback on purge operations
-- Built for Cloudflare Pages
-
-## Prerequisites
-
-- Node.js 18 or higher
-- A Cloudflare account with:
-  - Zone ID of your domain
-  - API Token with Cache Purge permissions
+A simple endpoint for purging Cloudflare cache. Just visit the URL to purge the cache for your zone.
 
 ## Setup
 
-1. Clone the repository:
-```bash
-git clone https://github.com/YOUR_USERNAME/cloudflare-cache-purge.git
-cd cloudflare-cache-purge
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. For local development:
-```bash
-npm run dev
-```
+1. Deploy to Cloudflare Pages
+2. Set the following environment variables in Cloudflare Pages:
+   - `ZONE_ID`: Your Cloudflare Zone ID
+   - `API_TOKEN`: Your Cloudflare API Token with cache purge permissions
 
 ## Usage
 
-1. Visit the deployed application or local development server
-2. Enter your Cloudflare Zone ID
-3. Enter your API Token
-4. Click "Purge Cache"
+Simply visit your deployed URL (e.g., `https://your-app.pages.dev/`). The cache will be purged automatically.
 
-## Security
+### Response Messages
 
-- API Tokens are never stored
-- All requests are made server-side
-- HTTPS enforced for all API communications
+- Success: "Cache purged successfully"
+- Error: Will show relevant error message
 
 ## Development
 
-Built with:
-- [Hono](https://honojs.dev/) - Lightweight web framework
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- Cloudflare Pages - Hosting and serverless functions
+```bash
+# Install dependencies
+npm install
 
-## License
+# Deploy
+npm run deploy
+```
 
-MIT
+## Security
 
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a new Pull Request
+- Credentials are stored as environment variables in Cloudflare Pages
+- No client-side storage of sensitive data
+- All requests are made server-side
+- HTTPS enforced by default
