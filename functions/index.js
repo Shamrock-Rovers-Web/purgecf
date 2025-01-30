@@ -1,5 +1,5 @@
-import { Hono } from './hono.js'
-import { serveStatic } from './cloudflare-pages.js'
+import { Hono } from 'hono'
+import { serveStatic } from 'hono/cloudflare-pages'
 
 const app = new Hono()
 

@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler pages dev --compatibility-date=2024-01-23",
-    "deploy": "wrangler pages deploy .",
-    "build": "cp node_modules/hono/dist/index.js functions/hono.js && cp node_modules/hono/dist/cloudflare-pages.js functions/cloudflare-pages.js"
+    "deploy": "wrangler pages deploy ."
   },
   "dependencies": {
     "hono": "^4.6.19"
